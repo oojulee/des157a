@@ -23,12 +23,14 @@ img {
     margin: 0 auto;
     display: flex;
     flex-direction: column;
+    
 }
 
 /* Header */
 header {
     margin-bottom: 20px;
     text-align: center;
+
 }
 
 h1 {
@@ -47,6 +49,7 @@ h2 {
 
 /* Main Layout */
 main {
+    font-family: Roboto, sans-serif;
     display: flex;
     flex-wrap: wrap;
     gap: 20px; 
@@ -88,25 +91,65 @@ article h2 {
     display: block;
 }
 
-/* Footer */
-footer {
+
+nav ul li a {
+    display: block;
+    color: #FFFFFF;
+    background-color: #6b6b6b;
+    text-decoration: none;
+    opacity: 80%;
+    font-size: 1.2em;
+    font-weight: bold;
+    padding: 10px 15px;
+    border-radius: 5px;
     text-align: center;
-    margin-top: 20px;
+    line-height: 1.5;
+    margin-bottom: 10px;
+    transition: background-color 0.3s ease, color 0.3s ease;
 }
 
+nav ul li a:hover {
+    background-color: #6b6b6b;
+    color: #131214;
+}
 
 .Research {
     background-image: url('images/content1.png');
+    height: auto;
+    max-width: 400px;
 }
 
 .MadLib {
-    background-image: url('images/Asset 15.png');
+    background-image: url('images/15.png');
+    height: auto;
+    max-width: 400px;
 }
 
 .EveryPicture {
-    background-image: url('images/Asset 16.png');
+    background-image: url('images/16.png');
+    height: auto;
+    max-width: 400px;
 }
 
 .Gameon {
-    background-image: url('images/Asset 17.png');
+    background-image: url('images/17.png');
+    height: auto;
+    max-width: 400px;
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    font-size: 2em;
+    margin-top: 30px;
+    padding: 20px;
+    background-color: #f0eded;
+
+}
+
+footer a {
+    text-decoration: none;
+    font-size: 0.7em;
+    font-family: Roboto;
+    color: #131214;
 }
