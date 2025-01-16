@@ -1,0 +1,112 @@
+/* General Styles */
+h1, h2 {
+    margin: 0;
+    padding: 0;
+    text-align: center;
+}
+
+nav ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+img {
+    display: block;
+    max-width: 100%;
+}
+
+
+/* Wrapper */
+.wrapper {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Header */
+header {
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+h1 {
+    font-family: Oswald, sans-serif;
+    color: #2b2b2b;
+    font-size: 3vw;
+    margin-top: 20px;
+}
+
+h2 {
+    font-family: Roboto, sans-serif;
+    color: #2b2b2b;
+    margin-top: 10px;
+    font-size: 1.5vw;
+}
+
+/* Main Layout */
+main {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px; 
+    align-items: flex-start;
+    justify-content: center; 
+}
+
+article {
+    flex: 0 0 calc(50% - 20px); 
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    min-height: 200px;
+    padding: 20px;
+    border-radius: 10px;
+    box-sizing: border-box;
+}
+
+article h2 {
+    margin-bottom: 20px;
+}
+
+
+#pot {
+    flex: 0 0 200px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: 20px; 
+}
+
+#pot img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    margin-top: 20px;
+}
+
+
+.Research {
+    background-image: url('images/content1.png');
+}
+
+.MadLib {
+    background-image: url('images/Asset 15.png');
+}
+
+.EveryPicture {
+    background-image: url('images/Asset 16.png');
+}
+
+.Gameon {
+    background-image: url('images/Asset 17.png');
+}
