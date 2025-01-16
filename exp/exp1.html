@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Experiment 1</title>
+</head>
+
+<body>
+    <h1>Experiment 1</h1>
+    <h2>Open the console to see the functionality of the code!</h2>
+
+    <script>
+
+
+        var inputString = prompt("Enter a lowercase string to capitalize:", "").trim();
+        var wordsArray;
+        var capitalizedString = "";
+
+
+        if (inputString === "") {
+            console.log("You entered an empty string. Please refresh and try again.");
+        } else {
+            wordsArray = inputString.split(" ");
+
+
+            for (var i = 0; i < wordsArray.length; i++) {
+
+                var word = wordsArray[i];
+                if (word.length > 0) { 
+                    capitalizedString += word[0].toUpperCase() + word.slice(1) + " ";
+                }
+            }
+
+            console.log("Capitalized String:", capitalizedString.trim());
+        }
+
+    </script>
+
+
+</body>
+
+</html>
