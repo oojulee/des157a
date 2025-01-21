@@ -1,0 +1,60 @@
+html {
+    font-size: 16px; 
+    line-height: 1.5; 
+    box-sizing: border-box;
+}
+
+*, *::before, *::after {
+    box-sizing: inherit;
+    margin: 0;
+    padding: 0;
+}
+
+
+body {
+    font-family: 'Roboto', sans-serif; 
+    color: #333; 
+    background-color: #f9f9f9; 
+    margin: 0;
+    padding: 1rem;
+}
+
+p {
+    max-width: 65ch; 
+    margin-bottom: 1.5em; 
+    font-size: 1rem; 
+    line-height: 1.8; 
+    color: #444; 
+}
+
+
+a {
+    color: #444; 
+    text-decoration: none; 
+    font-weight: 500; 
+    transition: color 0.3s ease; 
+}
+
+a:hover,
+a:focus {
+    color: #004999;
+    text-decoration: none; 
+}
+
+
+article header h2 {
+    font-family: 'Roboto', sans-serif; 
+    font-size: 1.5rem;
+    color: #222; 
+    margin-bottom: 0.5em;
+}
+
+
+article header time {
+    font-size: 0.875rem; 
+    color: #666; 
+    display: block;
+    margin-bottom: 1rem;
+}
+
+
