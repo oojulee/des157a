@@ -12,32 +12,31 @@
     <h2>Open the console to see the functionality of the code!</h2>
 
     <script>
+        // This program takes a lowercase string input from the user
+        // and capitalizes the first letter of each word in the string.
 
-
-        var inputString = prompt("Enter a lowercase string to capitalize:", "").trim();
+        var inputString = prompt("Enter a lowercase string to capitalize:", "").trim(); // Sequence: getting user input and trimming extra spaces
         var wordsArray;
         var capitalizedString = "";
 
-
+        // Selection: Checking if the input string is empty
         if (inputString === "") {
             console.log("You entered an empty string. Please refresh and try again.");
         } else {
-            wordsArray = inputString.split(" ");
+            wordsArray = inputString.split(" "); // Sequence: splitting the input string into an array of words
 
-
+            // Loop: Iterating through each word in the array
             for (var i = 0; i < wordsArray.length; i++) {
-
                 var word = wordsArray[i];
-                if (word.length > 0) { 
+                if (word.length > 0) {
+                    // Sequence: Capitalizing the first letter of each word
                     capitalizedString += word[0].toUpperCase() + word.slice(1) + " ";
                 }
             }
 
-            console.log("Capitalized String:", capitalizedString.trim());
+            console.log("Capitalized String:", capitalizedString.trim()); // Output the final result
         }
-
     </script>
-
 
 </body>
 

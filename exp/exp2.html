@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Experiment 2</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin: 20px;
+        }
+
+        h1 {
+            color: rgb(0, 166, 166);
+        }
+
+        #output {
+            margin-top: 20px;
+            font-size: 1.5em;
+            font-weight: bold;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>String Capitalizer Experiment</h1>
+    <h2>Watch your input transform dynamically below!</h2>
+
+    <!-- Container for the output -->
+    <div id="output"></div>
+
+    <script>
+        // This program takes a lowercase string input from the user,
+        // capitalizes the first letter of each word,
+        // and displays the result dynamically on the page.
+
+        // Prompt the user for input
+        var inputString = prompt("Enter a lowercase string to capitalize:", "").trim();
+
+        // Function to capitalize the first letter of each word
+        function capitalizeWords(input) {
+            var wordsArray = input.split(" ");
+            var capitalizedArray = [];
+
+            for (var i = 0; i < wordsArray.length; i++) {
+                if (wordsArray[i].length > 0) {
+                    capitalizedArray.push(
+                        wordsArray[i][0].toUpperCase() + wordsArray[i].slice(1)
+                    );
+                }
+            }
+
+            return capitalizedArray.join(" ");
+        }
+
+        // Function to display the result dynamically on the page
+        function displayResult(outputText) {
+            var outputDiv = document.getElementById("output");
+            outputDiv.innerText = outputText;
+
+            // Optional: Add some random styling for fun
+            outputDiv.style.color = getRandomColor();
+            outputDiv.style.backgroundColor = getRandomColor();
+            outputDiv.style.padding = "20px";
+            outputDiv.style.borderRadius = "10px";
+            outputDiv.style.boxShadow = "0 4px 8px rgba(0, 0, 0, 0.2)";
+        }
+
+        // Function to generate a random color
+        function getRandomColor() {
+            var letters = "0123456789ABCDEF";
+            var color = "#";
+            for (var i = 0; i < 6; i++) {
+                color += letters[Math.floor(Math.random() * 16)];
+            }
+            return color;
+        }
+
+        // Main logic: process the input and display the result
+        if (inputString === "") {
+            displayResult("You entered an empty string. Please refresh and try again.");
+        } else {
+            var result = capitalizeWords(inputString); // Call capitalizeWords function
+            displayResult("Capitalized String: " + result); // Display the result
+        }
+    </script>
+
+</body>
+
+</html>
