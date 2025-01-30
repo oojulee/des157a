@@ -100,26 +100,16 @@ article h2 {
     animation: tiltPot 3s infinite ease-in-out;
 }
 
-/* Tea Stream: Attached to Pot */
-/* #teaStream {
-    position: absolute;
-    top: 300px; /* Initial placement for tea spout */
-    right: 300px; /* Align with pot spout */
-    width: 30px;
-    height: 13; /* Initially hidden */
-    opacity: 0; /* Hidden at start */
-    /* transform-origin: top center;
-    animation: pourTea 3s infinite ease-in-out;
-} */ 
 
-/* Cup: Fixed in Place */
+
 #cup {
-    position: absolute;
-    bottom: 40px;
-    right: 120px;
-    width: 300px;
+    position: absolute; /* Changed from fixed */
+    top: 600px; /* Adjusted to be directly under the pot */
+    right: 180px; /* Align horizontally with pot */
+    width: 200px; /* Adjust size if needed */
     z-index: 2;
 }
+
 
 /* Pot Tilting Animation */
 @keyframes tiltPot {
