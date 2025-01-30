@@ -89,79 +89,64 @@ article h2 {
     grid-row: 2;
 }
 
-/* Pot and Cup Container */
+/* Pot Animation: Tilts and Pours */
 #pot {
-    grid-column: 3;
-    grid-row: 1 / span 2;
-    position: relative;
-    width: 300px; /* Adjust container width */
-    height: 400px; /* Adjust container height */
-    display: flex;
-    justify-content: flex-start;
-    align-items: center;
-    margin-top: 20px;
-}
-
-/* Pot 이미지 위치와 크기 */
-#pot {
-    width: 400px; /* Pot 크기 */
+    width: 300px; /* Adjust pot size */
     position: absolute;
-    top: 20px; /* Pot의 Y축 위치 */
-    left: 160px; /* Pot의 X축 위치 (오른쪽 대각선으로 이동) */
+    top: 50px; /* Maintain height above the cup */
+    right: 80px; /* Align it to pour into the cup */
     transform-origin: top right;
+    z-index: 3;
     animation: tiltPot 3s infinite ease-in-out;
 }
 
-/* Tea Stream 스타일 */
-.tea-stream {
+/* Tea Stream: Attached to Pot */
+/* #teaStream {
     position: absolute;
-    top: 150px; /* Tea 시작 위치를 pot의 주둥이에 맞춤 */
-    left: 210px; /* Tea가 주둥이에서 나오는 위치 */
-    width: 8px;
-    height: 0;
-    background-color: #d4a373; /* Tea 색상 */
-    border-radius: 5px;
-    opacity: 0; /* 초기에는 보이지 않음 */
+    top: 300px; /* Initial placement for tea spout */
+    right: 300px; /* Align with pot spout */
+    width: 30px;
+    height: 13; /* Initially hidden */
+    opacity: 0; /* Hidden at start */
+    /* transform-origin: top center;
     animation: pourTea 3s infinite ease-in-out;
-}
+} */ 
 
-/* Cup 이미지 위치와 크기 */
-#Cup {
+/* Cup: Fixed in Place */
+#cup {
     position: absolute;
-    bottom: 40px; /* Cup 위치 */
-    left: 60px; /* Pot의 아래 대각선으로 이동 */
-    width: 300px; /* Cup 크기 */
+    bottom: 40px;
+    right: 120px;
+    width: 300px;
     z-index: 2;
 }
 
-/* Pot 기울기 애니메이션 */
+/* Pot Tilting Animation */
 @keyframes tiltPot {
     0%, 100% {
-        transform: rotate(0deg); /* Pot은 기본 상태 */
+        transform: rotate(0deg); /* Neutral Position */
     }
     40% {
-        transform: rotate(-15deg); /* 살짝 기울어짐 (Tea가 아직 나오지 않음) */
-    }
-    60% {
-        transform: rotate(-30deg); /* 완전히 기울어진 상태 */
+        transform: rotate(-15deg); /* Slight tilt */
     }
 }
 
-/* Tea Pouring 애니메이션 */
+/* Tea Pouring Animation */
 @keyframes pourTea {
     0%, 50% {
         height: 0;
-        opacity: 0; /* Tea는 Pot이 기울기 시작한 초기에는 보이지 않음 */
+        opacity: 0; /* No tea pouring yet */
     }
     60% {
-        height: 100px; /* Tea가 나오는 길이 */
-        opacity: 1; /* Tea가 보이기 시작 */
+        height: 120px; /* Tea flowing down */
+        opacity: 1;
     }
     100% {
-        height: 0; /* 다시 Tea가 사라짐 */
-        opacity: 0;
+        height: 0;
+        opacity: 0; /* Stops pouring */
     }
 }
+
 
 
 
