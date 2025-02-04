@@ -133,12 +133,11 @@ footer {
     position: relative;
     width: 100%;
     text-align: center;
-    margin-top: 30px;
+    margin-top: 10px;
 }
 
 .dash {
     width: 100%;
     border-bottom: 4px dashed #6DFF85;
     height: 10px;
-    padding-bottom: 30px;
 }
