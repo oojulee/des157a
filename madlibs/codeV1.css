@@ -38,12 +38,19 @@ h1 {
 
 .container {
     font-size: 1.3em;
-    margin-bottom: 10px;
+    margin-bottom: 30px;
+    margin-right: 10px;
+    display: flex;
 }
 
 form {
     max-width: 500px;
     gap: 10px;
+}
+
+label {
+    min-width: 200px;
+    display: block;
 }
 
 input[type="text"], 

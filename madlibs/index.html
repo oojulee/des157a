@@ -1,11 +1,114 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>madlib</title>
+    <title>Madlibs Code Version 1</title>
+
+    <!-- Normalize CSS -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css" rel="stylesheet">
+
+    <!-- Custom CSS -->
+    <link href="style.css" rel="stylesheet">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Gemunu+Libre:wght@200..800&display=swap" rel="stylesheet">
+
+    <script src="script.js" defer></script>
 </head>
+
 <body>
-    
+    <header>
+        <h1>Madlibs!</h1>
+    </header>
+    <main>
+
+        <section class="firstPage">
+            <form method="post">
+                <div class="container">
+                    <label for="number">Pick a number</label>
+                    <input type="number" name="number" id="number">
+                </div>
+                <div class="container">
+                    <label for="adjective">Give me an adjective</label>
+                    <input type="text" name="adjective" id="adjective">
+                </div>
+                <div class="container">
+                    <label for="noun1">What do you hate the most (noun)</label>
+                    <input type="text" name="noun1" id="noun1">
+                </div>
+                <div class="container">
+                    <label for="noun2">What do you like the most (noun)</label>
+                    <input type="text" name="noun2" id="noun2">
+                </div>
+                <div class="container">
+                    <label for="place">Name a place</label>
+                    <input type="text" name="place" id="place">
+                </div>
+                <div class="submit">
+                    <input type="submit" name="submit" id="submit" value="Submit">
+                </div>
+            </form>
+
+            <div id="error"></div>
+
+            <div class="cat">
+                <img src="images/cat.png" alt="">
+            </div>
+            <div class="butterfly1">
+                <img src="images/butterfly.png" alt="butterfly">
+            </div>
+            <div class="butterfly2">
+                <img src="images/butterfly.png" alt="butterfly">
+            </div>
+            <div class="butterfly3">
+                <img src="images/butterfly.png" alt="butterfly">
+            </div>
+            <div class="butterfly4">
+                <img src="images/butterfly.png" alt="butterfly">
+            </div>
+
+            <footer>
+                <div class="dash"></div>
+            </footer>
+
+        </section>
+
+        <section id="nextPage" class="hidden">
+            <div class="systemMessage">
+                <article id="madlib">
+                    <!-- <h2>System Message</h2>
+                    <p class="madlibArcticle">You are the $[number]th appointed secret agent, [adjective] and
+                        unstoppable. Your mission:
+                        protect [noun2] from [noun1] at all costs. Your adventure begins in [place].
+                        Time is running out, Agent. Can you uncover the hidden plans, save [noun2], and outwit [noun1],
+                        or will the world fall into chaos? The fate of everything depends on your next move.</p> -->
+
+
+                    <!-- <div class="button">
+                        <button id="confirm">confirm</button>
+                    </div>
+                    <div class="alien">
+                        <img src="images/alien.png" alt="alien">
+                    </div> -->
+                </article>
+            </div>
+
+
+
+            <div class="lights">
+                <img class="light1" src="images/light.png" alt="light1">
+                <img class="light2" src="images/light.png" alt="light2">
+                <img class="light3" src="images/light.png" alt="light3">
+                <img class="light4" src="images/light.png" alt="light4">
+
+            </div>
+        </section>
+    </main>
+
+
 </body>
+
 </html>

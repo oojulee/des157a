@@ -10,7 +10,7 @@
     <link href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css" rel="stylesheet">
 
     <!-- Custom CSS -->
-    <link href="codeV1.css" rel="stylesheet">
+    <link href="style.css" rel="stylesheet">
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -26,7 +26,7 @@
     <main>
 
 
-        <form method="post">
+        <!-- <form method="post">
             <div class="container">
                 <label for="number">Pick a number</label>
                 <input type="number" name="number" id="number">
@@ -66,16 +66,39 @@
         </div>
         <div class="butterfly4">
             <img src="images/butterfly.png" alt="butterfly">
-        </div>
+        </div> -->
 
-        <section class="systemMessage">
+        <section id="nextPage" class="hidden">
+            <div class="systemMessage">
+                <article id="madlib">
+                    <h2>System Message</h2>
+                    <p>You are the $[number]th appointed secret agent, [adjective] and unstoppable. Your mission:
+                        protect [noun2] from [noun1] at all costs. Your adventure begins in [place].
+                        Time is running out, Agent. Can you uncover the hidden plans, save [noun2], and outwit [noun1],
+                        or will the world fall into chaos? The fate of everything depends on your next move.</p>
+                </article>
 
+                <div class="button">
+                    <button id="confirm">confirm</button>
+                </div>
+                <div class="alien">
+                    <img src="images/alien.png" alt="alien">
+                </div>
+            </div>
+
+            <div class="lights">
+                <img class="light1" src="images/light.png" alt="light1">
+                <img class="light2" src="images/light.png" alt="light2">
+                <img class="light3" src="images/light.png" alt="light3">
+                <img class="light4" src="images/light.png" alt="light4">
+           
+            </div>
         </section>
     </main>
 
-    <footer>
+    <!-- <footer>
         <div class="dash"></div>
-    </footer>
+    </footer> -->
 </body>
 
 </html>
