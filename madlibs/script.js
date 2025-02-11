@@ -3,11 +3,10 @@
     console.log('reading js');
 
     const form = document.querySelector('form');
-    const madlib = document.querySelector('#madlib');
+    const systemMessage = document.querySelector('.systemMessage');
     const nextPage = document.querySelector('#nextPage');
     const errorMessage = document.querySelector('#error');
     const firstPage = document.querySelector('.firstPage');
-
 
     firstPage.style.display = "block";
     nextPage.style.display = "none";
@@ -49,10 +48,10 @@
                 or will the world fall into chaos? The fate of everything depends on your next move.</p>
                 
                 <div class="button">
-                        <button id="confirm">Confirm</button>
+                    <button id="confirm">Confirm</button>
                 </div>
                 <div class="alien">
-                        <img id="alienImage" src="images/alien.png" alt="alien">
+                    <img id="alienImage" src="images/alien.png" alt="alien">
                 </div>`;
 
             // Clear form fields
@@ -63,9 +62,16 @@
             document.querySelector('#place').value = '';
 
             // Display the MadLib
-            madlib.innerHTML = myText;
+            
+            systemMessage.innerHTML = myText;
             firstPage.style.display = "none"; 
             nextPage.style.display = "block"; 
+
+            // Add event listener for confirm button
+            document.querySelector('#confirm').addEventListener('click', function () {
+                nextPage.style.display = "none";
+                firstPage.style.display = "block";
+            });
         }
 
         // Display error message if there's an issue
@@ -73,15 +79,5 @@
             errorMessage.innerHTML = myText;
         }
     });
-
-    // Use event delegation for the confirm button 
-    document.addEventListener('click', function (event) {
-        if (event.target && event.target.id === 'confirm') {
-            event.preventDefault();
-            nextPage.style.display = "none";  
-            firstPage.style.display = "block"; 
-        }
-    });
-
 
 })();

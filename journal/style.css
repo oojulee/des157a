@@ -160,6 +160,4 @@ button:hover {
     100% { transform: translateY(0px); }
 }
 
-header h1 {
-    animation: float 3s infinite ease-in-out;
-}
+
