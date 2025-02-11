@@ -14,13 +14,13 @@
     form.addEventListener('submit', function (event) {
         event.preventDefault();
 
-        const number = document.querySelector('#number').value;
-        const adjective = document.querySelector('#adjective').value;
-        const noun1 = document.querySelector('#noun1').value;
-        const noun2 = document.querySelector('#noun2').value;
-        const place = document.querySelector('#place').value;
+        const number = document.querySelector('#number').value.trim();
+        const adjective = document.querySelector('#adjective').value.trim();
+        const noun1 = document.querySelector('#noun1').value.trim();
+        const noun2 = document.querySelector('#noun2').value.trim();
+        const place = document.querySelector('#place').value.trim();
 
-        let myText;
+        let myText = "";
 
         if (number === '') {
             myText = "Please provide a number.";
@@ -37,11 +37,18 @@
         } else if (place === '') {
             myText = "Please provide a place.";
             document.querySelector('#place').focus();
-        } else {
-            // Clear error message if all fields are valid
-            errorMessage.innerHTML = '';
+        }
 
-            myText = `<h2>System Message</h2>
+        // Show error if there is one and stop execution
+        if (myText !== '') {
+            errorMessage.innerHTML = myText;
+            return; // Prevents the rest of the function from running
+        }
+
+        // If no error, clear error message and continue
+        errorMessage.innerHTML = '';
+
+        let resultText = `<h2>System Message</h2>
                 <p>You are the ${number}th appointed secret agent, ${adjective} and unstoppable. Your mission:
                 protect ${noun2} from ${noun1} at all costs. Your adventure begins in ${place}.
                 Time is running out, Agent. Can you uncover the hidden plans, save ${noun2}, and outwit ${noun1},
@@ -54,30 +61,23 @@
                     <img id="alienImage" src="images/alien.png" alt="alien">
                 </div>`;
 
-            // Clear form fields
-            document.querySelector('#number').value = '';
-            document.querySelector('#adjective').value = '';
-            document.querySelector('#noun1').value = '';
-            document.querySelector('#noun2').value = '';
-            document.querySelector('#place').value = '';
+        // Clear form fields
+        document.querySelector('#number').value = '';
+        document.querySelector('#adjective').value = '';
+        document.querySelector('#noun1').value = '';
+        document.querySelector('#noun2').value = '';
+        document.querySelector('#place').value = '';
 
-            // Display the MadLib
-            
-            systemMessage.innerHTML = myText;
-            firstPage.style.display = "none"; 
-            nextPage.style.display = "block"; 
+        // Display the MadLib
+        systemMessage.innerHTML = resultText;
+        firstPage.style.display = "none";
+        nextPage.style.display = "block";
 
-            // Add event listener for confirm button
-            document.querySelector('#confirm').addEventListener('click', function () {
-                nextPage.style.display = "none";
-                firstPage.style.display = "block";
-            });
-        }
-
-        // Display error message if there's an issue
-        if (myText !== '') {
-            errorMessage.innerHTML = myText;
-        }
+        // Add event listener for confirm button
+        document.querySelector('#confirm').addEventListener('click', function () {
+            nextPage.style.display = "none";
+            firstPage.style.display = "block";
+        });
     });
 
 })();
