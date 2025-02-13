@@ -10,12 +10,17 @@ html {
     padding: 0;
 }
 
+img {
+    width: 100%;
+    height: auto;
+}
+
 body {
     font-family: 'Poppins', sans-serif; 
     color: #4a4a4a;
     background-color: #fff5f8; 
     margin: 0;
-    padding: 1rem;
+    padding: 3rem;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -46,7 +51,7 @@ header h1 {
 
 /* Main Content */
 main {
-    max-width: 800px;
+    max-width: 900px;
     width: 100%;
     margin: 2rem 0;
 }
@@ -90,7 +95,7 @@ article div time {
 
 /* Paragraph Styling */
 p {
-    max-width: 65ch;
+    max-width: 750px;
     margin-bottom: 1.5em;
     font-size: 1rem;
     line-height: 1.8;
@@ -121,6 +126,25 @@ a::after {
 a:hover::after {
     opacity: 1;
 }
+
+figcaption p {
+    color: #ff69b4;
+}
+
+
+.image-container {
+    display: flex;
+    justify-content: center; 
+    flex-direction: column;
+    gap: 30px; 
+}
+
+
+.image-container img {
+    width: 400px; 
+    height: auto;
+}
+
 
 /* Footer */
 footer {
