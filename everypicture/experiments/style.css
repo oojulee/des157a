@@ -40,6 +40,28 @@ h1 {
     font-weight: 500;
 }
 
+.main-heart-icon {
+    position: absolute;
+    bottom: 70px;
+    left: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.main-heart-icon::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 41px;
+    height: 39px;
+    background-image: url('images/heart.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
 .photos {
     display: grid;
     place-items: center;
@@ -53,7 +75,24 @@ h1 {
 .hidden p {
     font-size: 1rem;
     font-weight: 400;
+    position: relative;
+    padding-left: 20px;
+    margin-left: 200px;
 }
+
+.hidden p::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 15px;
+    height: 14px;
+    background-image: url('images/blackheart.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
 
 
 .hidden h2,
@@ -73,6 +112,34 @@ h1 {
 .hidden img:hover {
     filter: saturate(200%);
 }
+
+.image-container {
+    position: relative;
+    display: inline-block;
+}
+
+.heart-icon {
+    position: absolute;
+    bottom: 50px;
+    left: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.heart-icon::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 18px;
+    height: 17px;
+    background-image: url('images/heart.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
 
 .firstRow {
     display: flex;
