@@ -1,0 +1,85 @@
+h1,
+h2,
+h3,
+p {
+    margin: 0;
+    padding: 0;
+    font-family: "Inter";
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
+}
+
+h1 {
+    text-align: center;
+    margin-top: 50px;
+    margin-bottom: 10px;
+    font-size: 3rem;
+
+}
+
+.mainImg {
+    display: grid;
+    place-items: center;
+}
+
+.mainImg img {
+    width: 560px;
+    height: 560px;
+    border-radius: 50px;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.mainImg h3 {
+    font-size: 1.3rem;
+    font-weight: 500;
+}
+
+.photos {
+    display: grid;
+    place-items: center;
+}
+
+.hidden h2 {
+    font-size: 3rem;
+    margin-top: 50px;
+}
+
+.hidden p {
+    font-size: 1rem;
+    font-weight: 400;
+}
+
+
+.hidden h2,
+.hidden p {
+    margin-left: 200px;
+}
+
+
+.hidden img {
+    width: 242px;
+    height: 242px;
+    border-radius: 30px;
+    margin: 25px;
+
+}
+
+.hidden img:hover {
+    filter: saturate(200%);
+}
+
+.firstRow {
+    display: flex;
+    flex-direction: row;
+}
+
+.secondRow {
+    display: flex;
+    flex-direction: row;
+}
