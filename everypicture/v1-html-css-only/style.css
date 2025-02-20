@@ -1,0 +1,302 @@
+h1,
+h2,
+h3,
+p {
+    margin: 0;
+    padding: 0;
+    font-family: "Karla";
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+
+h1 {
+    text-align: center;
+    margin-top: 50px;
+    margin-bottom: 10px;
+    font-size: 2.3rem;
+    position: relative;
+    padding-right: 50px;
+
+}
+
+
+.next-button {
+    content: '';
+    position: absolute;
+    right: 575px;
+    top: 65%;
+    transform: translateY(-50%);
+    width: 22px;
+    height: 34px;
+    background-image: url('images/next-button.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+
+.main-image-container {
+    position: relative;
+    display: inline-block;
+}
+
+.mainImg {
+    display: grid;
+    place-items: center;
+}
+
+.mainImg img {
+    width: 530px;
+    height: 530px;
+    border-radius: 50px;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.mainImg h3 {
+    font-size: 1.3rem;
+    font-weight: 500;
+}
+
+.main-heart-icon {
+    position: absolute;
+    bottom: 70px;
+    left: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.main-heart-icon:hover::before {
+    background-image: url('images/redheart.png');
+}
+
+.main-heart-icon::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 41px;
+    height: 39px;
+    background-image: url('images/heart.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+.photos {
+    display: grid;
+    place-items: center;
+}
+
+.hidden h2 {
+    font-size: 2.3rem;
+    margin-top: 50px;
+    position: relative;
+    padding-left: 50px;
+    margin-bottom: 20px;
+}
+
+.back-button {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 65%;
+    transform: translateY(-50%);
+    width: 22px;
+    height: 34px;
+    background-image: url('images/back-button.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+.hidden p {
+    font-size: 1rem;
+    font-weight: 400;
+    position: relative;
+    padding-left: 70px;
+    margin-left: 200px;
+}
+
+.hidden p::before {
+    content: '';
+    position: absolute;
+    left: 50px;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 15px;
+    height: 14px;
+    background-image: url('images/blackheart.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+
+
+.hidden h2,
+.hidden p {
+    margin-left: 200px;
+}
+
+
+.hidden .image-container:hover .heart-icon {
+    display: block;
+    z-index: 2;
+}
+
+
+.hidden .heart-icon {
+    position: absolute;
+    bottom: 15px;
+    left: 15px;
+    width: 18px;
+    height: 17px;
+    background-image: url('images/heart.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+    cursor: pointer;
+    z-index: 2;
+}
+
+.hidden .heart-icon:hover {
+    position: absolute;
+    bottom: 15px;
+    left: 15px;
+    width: 18px;
+    height: 17px;
+    background-image: url('images/redheart.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+    cursor: pointer;
+    z-index: 2;
+}
+
+
+
+.hidden img {
+    width: 242px;
+    height: 242px;
+    border-radius: 30px;
+    transition: transform 0.3s ease;
+
+}
+
+.hidden img:hover {
+    filter: saturate(200%);
+    transform: scale(1.03);
+    z-index: 1;
+    position: relative;
+
+}
+
+
+.image-container {
+    position: relative;
+    display: inline-block;
+    width: 242px;
+    width: 242px;
+    margin: 25px;
+}
+
+
+.firstRow {
+    display: flex;
+    flex-direction: row;
+}
+
+.secondRow {
+    display: flex;
+    flex-direction: row;
+}
+
+.eachImg {
+    display: grid;
+    place-items: center;
+
+}
+
+
+
+.second-back-button {
+    position: absolute;
+    left: -280px;
+    top: 0;
+    width: 22px;
+    height: 34px;
+    background-image: url('images/back-button.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+    z-index: 1;
+
+}
+
+
+.eachImg .heading h3,
+.eachImg .heading p {
+    text-align: center;
+}
+
+.Backey,
+.Vegetables,
+.Flowers,
+.Sunset,
+.Getty,
+.Symmetry,
+.Catnapping,
+.Flowerhouse {
+    position: relative;
+    padding-left: 80px;
+}
+
+
+.eachImg img {
+    width: 400px;
+    height: auto;
+    border-radius: 5px;
+    margin: 20px;
+}
+
+.info {
+    background-color: #D9D9D9;
+    border-radius: 30px;
+    padding: 10px;
+    max-width: 350px;
+    height: fit-content;
+}
+
+.info h3,
+.info p {
+    padding-left: 20px;
+    margin-bottom: 10px;
+}
+
+.info .story {
+    background-color: #8C8C8C;
+    border-radius: 15px;
+    padding: 10px;
+    padding-left: 20px;
+}
+
+.Backey {
+    position: relative;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 40px;
+}
+
+
+.Backey .heading {
+    flex: 0 0 100%;
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+.Backey .info {
+    flex: 0 0 350px;
+    margin-top: 20px;
+}

@@ -11,16 +11,33 @@ img {
     max-width: 100%;
     height: auto;
     display: block;
-    box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
 }
 
 h1 {
     text-align: center;
     margin-top: 50px;
     margin-bottom: 10px;
-    font-size: 2.5rem;
+    font-size: 2.3rem;
+    position: relative;
+    padding-right: 50px;
 
 }
+
+
+.next-button {
+    content: '';
+    position: absolute;
+    right: 575px;
+    top: 65%;
+    transform: translateY(-50%);
+    width: 22px;
+    height: 34px;
+    background-image: url('images/next-button.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
 
 .main-image-container {
     position: relative;
@@ -33,8 +50,8 @@ h1 {
 }
 
 .mainImg img {
-    width: 560px;
-    height: 560px;
+    width: 530px;
+    height: 530px;
     border-radius: 50px;
     text-align: center;
     margin-bottom: 20px;
@@ -77,22 +94,38 @@ h1 {
 }
 
 .hidden h2 {
-    font-size: 3rem;
+    font-size: 2.3rem;
     margin-top: 50px;
+    position: relative;
+    padding-left: 50px;
+    margin-bottom: 20px;
+}
+
+.back-button {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 65%;
+    transform: translateY(-50%);
+    width: 22px;
+    height: 34px;
+    background-image: url('images/back-button.png');
+    background-size: contain;
+    background-repeat: no-repeat;
 }
 
 .hidden p {
     font-size: 1rem;
     font-weight: 400;
     position: relative;
-    padding-left: 20px;
+    padding-left: 70px;
     margin-left: 200px;
 }
 
 .hidden p::before {
     content: '';
     position: absolute;
-    left: 0;
+    left: 50px;
     top: 50%;
     transform: translateY(-50%);
     width: 15px;
@@ -123,6 +156,19 @@ h1 {
     width: 18px;
     height: 17px;
     background-image: url('images/heart.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+    cursor: pointer;
+    z-index: 2;
+}
+
+.hidden .heart-icon:hover {
+    position: absolute;
+    bottom: 15px;
+    left: 15px;
+    width: 18px;
+    height: 17px;
+    background-image: url('images/redheart.png');
     background-size: contain;
     background-repeat: no-repeat;
     cursor: pointer;
