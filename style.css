@@ -91,10 +91,10 @@ article h2 {
 
 /* Pot Animation: Tilts and Pours */
 #pot {
-    width: 300px; /* Adjust pot size */
+    width: 300px; 
     position: absolute;
-    top: 50px; /* Maintain height above the cup */
-    right: 80px; /* Align it to pour into the cup */
+    top: 50px; 
+    right: 80px; 
     transform-origin: top right;
     z-index: 3;
     animation: tiltPot 3s infinite ease-in-out;
@@ -103,10 +103,10 @@ article h2 {
 
 
 #cup {
-    position: absolute; /* Changed from fixed */
-    top: 600px; /* Adjusted to be directly under the pot */
-    right: 180px; /* Align horizontally with pot */
-    width: 200px; /* Adjust size if needed */
+    position: absolute;
+    top: 600px; 
+    right: 180px; 
+    width: 200px;
     z-index: 2;
 }
 
@@ -114,10 +114,10 @@ article h2 {
 /* Pot Tilting Animation */
 @keyframes tiltPot {
     0%, 100% {
-        transform: rotate(0deg); /* Neutral Position */
+        transform: rotate(0deg);
     }
     40% {
-        transform: rotate(-15deg); /* Slight tilt */
+        transform: rotate(-15deg); 
     }
 }
 
@@ -136,10 +136,6 @@ article h2 {
         opacity: 0; /* Stops pouring */
     }
 }
-
-
-
-
 
 
 nav ul li a {
@@ -193,7 +189,7 @@ nav ul li a:hover {
 /* Footer */
 footer {
     text-align: center;
-    font-size: 2em;
+    font-size: 1em;
     margin-top: 30px;
     padding: 20px;
     background-color: #f0eded;
@@ -201,7 +197,6 @@ footer {
 
 footer a {
     text-decoration: none;
-    font-size: 0.7em;
     font-family: Roboto;
     color: #131214;
 }

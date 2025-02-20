@@ -1,0 +1,168 @@
+h1,
+h2,
+h3,
+p {
+    margin: 0;
+    padding: 0;
+    font-family: "Inter";
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
+}
+
+h1 {
+    text-align: center;
+    margin-top: 50px;
+    margin-bottom: 10px;
+    font-size: 2.5rem;
+
+}
+
+.main-image-container {
+    position: relative;
+    display: inline-block;
+}
+
+.mainImg {
+    display: grid;
+    place-items: center;
+}
+
+.mainImg img {
+    width: 560px;
+    height: 560px;
+    border-radius: 50px;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.mainImg h3 {
+    font-size: 1.3rem;
+    font-weight: 500;
+}
+
+.main-heart-icon {
+    position: absolute;
+    bottom: 70px;
+    left: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.main-heart-icon:hover::before {
+    background-image: url('images/redheart.png');
+}
+
+.main-heart-icon::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 41px;
+    height: 39px;
+    background-image: url('images/heart.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+.photos {
+    display: grid;
+    place-items: center;
+}
+
+.hidden h2 {
+    font-size: 3rem;
+    margin-top: 50px;
+}
+
+.hidden p {
+    font-size: 1rem;
+    font-weight: 400;
+    position: relative;
+    padding-left: 20px;
+    margin-left: 200px;
+}
+
+.hidden p::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 15px;
+    height: 14px;
+    background-image: url('images/blackheart.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+
+
+.hidden h2,
+.hidden p {
+    margin-left: 200px;
+}
+
+
+.hidden .image-container:hover .heart-icon {
+    display: block;
+    z-index: 2;
+}
+
+
+.hidden .heart-icon {
+    position: absolute;
+    bottom: 15px;
+    left: 15px;
+    width: 18px;
+    height: 17px;
+    background-image: url('images/heart.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+    cursor: pointer;
+    z-index: 2;
+}
+
+
+
+.hidden img {
+    width: 242px;
+    height: 242px;
+    border-radius: 30px;
+    transition: transform 0.3s ease;
+
+}
+
+.hidden img:hover {
+    filter: saturate(200%);
+    transform: scale(1.03);
+    z-index: 1;
+    position: relative;
+
+}
+
+
+.image-container {
+    position: relative;
+    display: inline-block;
+    width: 242px;
+    width: 242px;
+    margin: 25px;
+}
+
+
+.firstRow {
+    display: flex;
+    flex-direction: row;
+}
+
+.secondRow {
+    display: flex;
+    flex-direction: row;
+}
