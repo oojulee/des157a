@@ -284,8 +284,8 @@ h1 {
     padding: 10px;
     display: none;
     position: absolute;
-    width: 350px;
-    bottom: 60px;
+    width: 400px;
+    bottom: 70px;
     left: 57.5%;
     transform: translateX(-50%);
     z-index: 3;
@@ -439,7 +439,6 @@ h1 {
 .container6:hover img,
 .container7:hover img {
     opacity: 0;
-    transform: scale(1.02);
 }
 
 .container:hover::after,
