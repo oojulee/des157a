@@ -1,0 +1,11 @@
+img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+
+
+h2{
+    justify-content: center;
+    text-align: center;
+}
