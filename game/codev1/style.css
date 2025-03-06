@@ -1,0 +1,105 @@
+h1,
+h2,
+h3,
+p {
+    margin: 0;
+    padding: 0;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+
+header {
+    display: flex;
+    justify-content: space-between; /* Aligns children to each end */
+    align-items: center;
+    position: relative;
+    padding: 20px 50px;
+}
+
+h1 {
+    font-family: "Barriecito";
+    text-align: center;
+    margin-top: 0;
+    margin-bottom: 0;
+    font-size: 2.3rem;
+    position: absolute; /* Makes h1 position independent of flex items */
+    left: 50%; /* Center h1 horizontally */
+    transform: translateX(-50%); /* Ensures true centering by shifting half its width back */
+    width: auto; /* Allows width to grow as needed */
+    z-index: 1;
+
+}
+
+.buttons {
+    display: flex;
+    gap: 20px;
+    align-items: center;
+}
+
+.quit, .restart {
+    display: flex;
+    align-items: center; 
+}
+
+
+.buttons img {
+    display: block;
+    height: auto; 
+    width: auto;
+}
+
+.quit, .restart, .rule {
+    display: flex;
+    align-items: baseline;
+}
+
+
+.rule {
+    position: absolute;
+    right: 80px;
+    height: 100px;
+    top: 50%;
+    transform: translateY(-50%);
+
+}
+
+.content {
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    margin-top: 30px;
+}
+
+
+.pig1, .pig2 {
+    display: flex;
+    flex-direction: column; 
+    align-items: center;
+}
+
+.buttons2 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 80px;
+}
+
+.pass, .roll {
+    background-color: #D4EAFF;
+    padding: 20px;
+    width: 205px;
+    border-radius: 5px;
+
+}
+
+.buttons2 h2 {
+    font-family: "Barriecito";
+    text-align: center;
+
+}
+
+
