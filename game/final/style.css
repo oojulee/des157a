@@ -1,0 +1,261 @@
+h1,
+h2,
+h3,
+p {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    width: 1200px;
+    height: 750px;
+    overflow: hidden;
+    margin: 0 auto;
+    padding: 0;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+}
+
+
+img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+    padding: 20px 50px;
+    margin-top: 10px;
+}
+
+h1 {
+    font-family: "Barriecito";
+    color: #BCBCBC;
+    -webkit-text-stroke: 0.2px black;
+    text-align: center;
+    margin-top: 0;
+    margin-bottom: 0;
+    font-size: 2.3rem;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    width: auto;
+    z-index: 1;
+
+}
+.rules-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.8);
+    z-index: 1000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+
+.rules-image {
+    max-width: 80%;
+    max-height: 80%;
+    object-fit: contain;
+    animation: rulesEntrance 0.3s ease-out;
+}
+
+@keyframes rulesEntrance {
+    from {
+        transform: scale(0.9);
+        opacity: 0;
+    }
+    to {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+
+.buttons {
+    display: flex;
+    gap: 20px;
+    align-items: center;
+}
+
+
+.restart {
+    display: flex;
+    align-items: center;
+}
+
+
+.buttons img {
+    display: block;
+    height: auto;
+    width: auto;
+}
+
+
+.restart,
+.rule {
+    display: flex;
+    align-items: baseline;
+}
+
+.restart {
+    max-width: 82px;
+
+}
+
+
+.rule {
+    position: absolute;
+    right: 80px;
+    height: auto;
+    max-width: 100px;
+    top: 50%;
+    transform: translateY(-50%);
+
+}
+
+
+
+.turn {
+    position: relative;
+    height: 0;
+}
+
+
+.player1 {
+    position: absolute;
+    width: 100%;
+    z-index: 10;
+}
+
+
+.player1 p {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    top: -20px;
+    color: #FF5252;
+    font-family: "Carlito", sans-serif;
+    font-size: 1.5rem;
+    width: 100%;
+    text-align: center;
+    margin: 0;
+}
+
+.player1 img {
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    width: 340px;
+    height: auto;
+}
+
+
+.player1 {
+    display: flex;
+}
+
+.player1 img {
+    margin: 0;
+    padding: 0;
+}
+
+
+
+.content {
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    margin-top: 10px;
+}
+
+.background {
+    max-width: 670px;
+}
+
+
+.pig1,
+.pig2 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    max-width: 220px;
+}
+
+
+
+.buttons2 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 80px;
+}
+
+.pass,
+.roll {
+    background-color: #D4EAFF;
+    padding: 20px;
+    width: 180px;
+    height: 30px;
+    border-radius: 5px;
+
+}
+
+.buttons2 h2 {
+    font-family: "Barriecito";
+    font-size: 2em;
+    color: #0F334E;
+    text-align: center;
+
+}
+
+@keyframes winnerRotate {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    25% {
+        transform: rotate(5deg);
+    }
+
+    50% {
+        transform: rotate(0deg);
+    }
+
+    75% {
+        transform: rotate(-5deg);
+    }
+
+    100% {
+        transform: rotate(0deg);
+    }
+}
+
+.winner-container {
+    animation: winnerRotate 0.5s infinite ease-in-out;
+    transform-origin: center center;
+}
+
+@keyframes bounce {
+
+    0%,
+    100% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-30px);
+    }
+}
+
+.winner-bounce {
+    animation: bounce 0.3s infinite ease-in-out;
+}
